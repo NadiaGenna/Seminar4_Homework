@@ -2,14 +2,19 @@
 //3, 5-> 243(3⁵)
 //2, 4-> 16
 
-Console.WriteLine("Введите первое число (A):");
-int a = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите второе число (B):");
-int b = Convert.ToInt32(Console.ReadLine());
-int step = a;
-
-for (int i = 1; i < b; i++)
+Console.Write("Введите число A: ");
+int numberA = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите натуральное число B: ");
+int numberB = Convert.ToInt32(Console.ReadLine());
+int Exponentiation(int numberA, int numberB)
 {
-    step = step * a;
+    int result = 1;
+    for (int i = 1; i <= numberB; i++)
+    {
+        result = result * numberA;
+    }
+    // int result = Math.Pow(numberA, numberB);
+    return result;
 }
-Console.WriteLine("A в степени B равно: " + step);
+int exponentiation = Exponentiation(numberA, numberB);
+Console.WriteLine("A в натуральной степени B равно: " + exponentiation);
